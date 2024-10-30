@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAV SERVICES</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <!-- custom css file link  -->
+  <link rel="stylesheet" href="stylesheet.css" />
+</head>
+
+<body>
+    <!-- header section  -->
+
+      <header class="header">
+        <div class="bgimg"></div>
+    <a href class="logo">RAV Services</a>
+
+    <nav class="navbar">
+      <a href="#home">home</a>
+      <a href="#about">about</a>
+      <!-- <a href="#menu">menu</a> -->
+      <a href="#services">services</a>
+      <!-- <a href="#review">review</a> -->
+      <a href="#contact">contact</a>
+      <!-- <a href="#blogs">blogs</a> -->
+    </nav>
+
+    <div class="icons">
+      <div class="fas fa-search" id="search-btn"></div>
+      <!-- <div class="fas fa-shopping-cart" id="cart-btn"><span class="cart-badge" id="cart-badge">0</span></div> -->
+      <label class="switch" id="darkModeLabel" title="Dark mode: off">
+        <input type="checkbox" id="darkModeToggle" />
+        <span class="slider"></span>
+      </label>
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    <div class="search-form">
+      <input type="search" id="search-box" placeholder="search here..." />
+      <label for="search-box" class="fas fa-search"></label>
+    </div>
+
+    <!-- <div class="cart-items-container" id="cart-items-container">
+      <h1>Cart</h1>
+      <div id="cart-items"></div>
+      <p id="empty-cart-message">No items in the cart.</p>
+      <div class="cart-total" id="cart-total">
+        <p>Total Items: <span id="total-items">0</span></p>
+        <p>Total: <span id="total-price">0.00</span></p>
+        <p>Taxes (10%): <span id="taxes">0.00</span></p>
+        <p>Total with Taxes: <span id="final-total-price">0.00</span></p>
+        <button class="btn btn-checkout" onclick="checkout()">Checkout Now</button>
+      </div>
+      <div id="notification-main-screen" class="notification-main-screen"></div>
+    </div> -->
+  </header>
+    
+    <!-- header section ends -->
+
+
+    
+        <!-- home section starts  -->
+        <section class = "home" id="home">
+          <div class="bgimg"></div>
+          <div class="content">
+            <h3>Safety First, Every Mile of the Way...</h3>
+            <h4>"Committed to Safe Transportation"</h4>
+              <p>
+                At RAV Services, safety isn't just a priority - it's a commitment. 
+                As a leading trucking company, we understand the responsibility that comes with being on the road. 
+                Our safety department ensures that every mile is traveled with the highest standards of care, 
+                protecting our drivers, the cargo, and everyone we share the road with.
+              </p>
+              <a href="#services" class="btn"> Ready to explore our services <span class="arrowLong">&#10230;</span> </a>
+          </div>
+        </section>
+
+        <!-- home section ends -->
+
+        <!-- about section starts  -->
+        <section class="about" id="about" >
+          <!-- <h1 class="heading"><span>About</span> Us</h1> -->
+          <h1 class="heading">About Us</h1>
+
+          <!-- <div class="about-bg">
+            <img src="4.jpg" alt="">
+          </div> -->
+          <div class="row">
+            <div class="image">
+              <img src="about-img.png" alt="" >
+            </div>
+
+            <div class="content">
+              <h3>what makes our company special?</h3>
+              <h4>"Protecting our drivers, cargo, and community with top-tier safety practices."</h4>
+              <p>
+                RAV Services stands out in the trucking industry with its comprehensive training programs, 
+                advanced technology, proactive safety culture, and commitment to driver wellness.</p> 
+              <p>Our rigorous compliance standards and community engagement ensure safety for our drivers 
+                and the communities we serve.
+              </p>
+              <a class="btn" id="openModalButton">Our Story...</a>
+              <div class="modal" id="myModal">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title">Our Story...</h2>
+                    <button class="close-button" id="closeModalButton">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Our Safety Department is the backbone of our operation, 
+                      ensuring that all drivers, vehicles, and procedures are in line with federal and state regulations. 
+                      With a dedicated team of safety professionals, we make sure that our fleet meets the highest standards, 
+                      and our drivers receive ongoing training to keep everyone safe on the road.
+                  </div>
+                </div>
+              </div>
+          </div> 
+        </section>
+        <!-- about section ends -->
+
+          <!-- menu section starts  -->
+      <!-- <section class="menu" id="menu">
+        <h1 class="heading">ourmenu</h1>
+
+        <div class="box-container">
+          <div class="box">
+            <img src="images/menu-1.png" alt="" />
+            <h3>Espresso</h3>
+            <div class="price">$2.50 <span>3.25</span></div>
+            <a title="Add To Cart" id="clickButton1" class="btn" onclick="addToCart('Espresso', 2.50)">add to cart</a>
+          </div>
+
+          <div class="box">
+            <img src="images/menu-2.png" alt="" />
+            <h3>Latte</h3>
+            <div class="price">$3.50 <span>5.50</span></div>
+            <a title="Add To Cart" id="clickButton2" class="btn" onclick="addToCart('Latte', 3.50)">add to cart</a>
+          </div>
+
+          <div class="box">
+            <img src="images/menu-3.png" alt="" />
+            <h3>Cappuccino</h3>
+            <div class="price">$3.75 <span>4.75</span></div>
+            <a title="Add To Cart" class="btn" onclick="addToCart('Cappuccino', 3.75)">add to cart</a>
+          </div>
+
+          <div class="box">
+            <img src="images/menu-4.png" alt="" />
+            <h3>Americano</h3>
+            <div class="price">$2.75 <span>3.99</span></div>
+            <a title="Add To Cart" class="btn" onclick="addToCart('Americano', 2.75)">add to cart</a>
+          </div>
+
+          <div class="box">
+            <img src="images/menu-5.png" alt="" />
+            <h3>Mocha</h3>
+            <div class="price">$4.00 <span>4.99</span></div>
+            <a title="Add To Cart" class="btn" onclick="addToCart('Mocha', 4.00)">add to cart</a>
+          </div>
+
+          <div class="box">
+            <img src="images/menu-6.png" alt="" />
+            <h3>Macchiato</h3>
+            <div class="price">$3.25 <span>4.80</span></div>
+            <a title="Add To Cart" class="btn" onclick="addToCart('Macchiato', 3.25)">add to cart</a>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- menu section ends -->
+
+        <!-- services section starts -->
+        <section class="services" id="services">
+          <h1 class="heading">our services</h1>
+      
+          <div class="box-container">
+            <div class="box">
+              <div class="icons">
+                <!-- <a title="Add To Cart" class="fas fa-shopping-cart" onclick="addToCart('Safety Training and Certification', 25.40)"></a> -->
+                <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+                <a title="Safety Training and Certification" onclick="openModal(1)" class="fas fa-eye"></a>
+              </div>
+              <div class="image">
+                <img src="safety_certification.png" alt="safety_certification" />
+              </div>
+              <div class="content">
+                <h3>Safety Training and Certification</h3>
+                <!-- <div title="5 Stars" class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="price">$25.40 <span>$28.99</span></div> -->
+              </div>
+            </div>
+      
+            <div class="box">
+              <div class="icons">
+                <!-- <a title="Add To Cart" class="fas fa-shopping-cart" onclick="addToCart('Colombian coffee', 20.99)"></a> -->
+                <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+                <a title="Safety Technology" onclick="openModal(2)" class="fas fa-eye"></a>
+              </div>
+              <div class="image">
+                <img src="safety_technology.jpg" alt="safety_technology" />
+              </div>
+              <div class="content">
+                <h3>Safety Technology</h3>
+                <!-- <div title="4 Stars" class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="price">$20.99 <span>$25.99</span></div> -->
+              </div>
+            </div>
+      
+            <div class="box">
+              <div class="icons">
+                <!-- <a title="Add To Cart" class="fas fa-shopping-cart" onclick="addToCart('Peru coffee', 15.99)"></a> -->
+                <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+                <a title="driver wellness and support" onclick="openModal(3)" class="fas fa-eye"></a>
+              </div>
+              <div class="image">
+                <img src="driver_wellness.jpg" alt="wellness_support" />
+              </div>
+              <div class="content">
+                <h3>Driver Wellness & Support</h3>
+                <!-- <div title="4.5 Stars" class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">$15.99 <span>$20.99</span></div> -->
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="icons">
+                <!-- <a title="Add To Cart" class="fas fa-shopping-cart" onclick="addToCart('Peru coffee', 15.99)"></a> -->
+                <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+                <a title="Compliance & Policies" onclick="openModal(4)" class="fas fa-eye"></a>
+              </div>
+              <div class="image">
+                <img src="truck_policies.png" alt="" />
+              </div>
+              <div class="content">
+                <h3>Compliance & Policies</h3>
+                <!-- <div title="4.5 Stars" class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">$15.99 <span>$20.99</span></div> -->
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="icons">
+                <!-- <a title="Add To Cart" class="fas fa-shopping-cart" onclick="addToCart('Peru coffee', 15.99)"></a> -->
+                <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+                <a title="Incident Reporting" onclick="openModal(5)" class="fas fa-eye"></a>
+              </div>
+              <div class="image">
+                <img src="incident_report.jpg" alt="" />
+              </div>
+              <div class="content">
+                <h3>Incident Reporting</h3>
+                <!-- <div title="4.5 Stars" class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">$15.99 <span>$20.99</span></div> -->
+              </div>
+            </div>
+            
+            <!-- new -->
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+                <h2>Safety Training and Certification</h2>
+                <div class="modal-body">
+                  <img src="safety_certification.png" alt="Safety Training and Certification Image">
+                    <h3>"Training Our Drivers for Success"</h3><br>
+                      <p>Safety starts with proper training. Our drivers go through rigorous training programs, 
+                        including certification courses, to ensure they are equipped with the knowledge and skills necessary to drive safely.</p>
+                      <p>Our training covers:
+                        <ul><li>Defensive driving techniques</li>
+                            <li>Safe cargo handling</li>
+                            <li>Hazardous materials transportation (HAZMAT certification)</li>
+                            <li>Hours of Service (HOS) regulations</li>
+                            <li>Emergency procedures</li>
+                        </ul>
+                      </p><br>
+                      <p>We also provide ongoing refresher courses to keep our drivers updated on the latest safety regulations and practices.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="prev" onclick="prevModal(1)">Previous</button>
+                  <button class="next" onclick="nextModal(1)">Next</button>
+                </div>
+              </div>
+            </div>
+      
+            <div id="modal2" class="modal">
+              <div class="modal-content">
+                <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+                <h2>Safety Technology</h2>
+                <div class="modal-body">
+                  <img src="safety_technology.jpg" alt="Safety Technology">
+                    <h3>"Leveraging Technology for Enhanced Safety"</h3><br>
+                      <p>We utilize cutting-edge technology to ensure safety is at the forefront of every journey.</p>
+                      <p>Our fleet is equipped with:
+                        <ul><li>GPS tracking and route optimization to minimize risk</li>
+                            <li>Onboard cameras and telematics to monitor driver behavior</li>
+                            <li>Electronic logging devices (ELDs) to comply with Hours of Service regulations</li>
+                            <li>Collision avoidance systems</li>
+                            <li>Real-time weather and traffic updates for safe navigation</li>
+                        </ul>
+                      </p><br>
+                      <p>By integrating these tools, we ensure our drivers have all the support they need to stay safe and efficient on the road.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="prev" onclick="prevModal(2)">Previous</button>
+                  <button class="next" onclick="nextModal(2)">Next</button>
+                </div>
+              </div>
+            </div>
+      
+            <div id="modal3" class="modal">
+              <div class="modal-content">
+                <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+                <h2>Driver Wellness & Support</h2>
+                <div class="modal-body">
+                  <img src="driver_wellness.jpg" alt="Driver Wellness & Support">
+                    <h3>"Putting Driver Wellbeing First"</h3><br>
+                  <p>We believe that a healthy driver is a safe driver. That's why we invest in the wellness of our team.</p><br> 
+                    <p>Our welness program cover:
+                    <ul><li>Health and wellness sessions</li>
+                      <li>Fatigue management resources</li>
+                      <li>Access to mental health support</li>
+                      <li>Collision avoidance systems</li>
+                      <li>Guidelines on healthy driving habits and lifestyle choices</li>
+                    </ul>
+                    </p><br>
+                    <p>Our team also works closely with drivers to ensure their schedules are manageable and comply with regulations to avoid fatigue and ensure alertness.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="prev" onclick="prevModal(3)">Previous</button>
+                  <button class="next" onclick="nextModal(3)">Next</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="modal4" class="modal">
+              <div class="modal-content">
+                <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+                <h2>Compliance & Policies</h2>
+                <div class="modal-body">
+                  <img src="truck_policies.png" alt="Compliance & Policies">
+                    <h3>"Ensuring Compliance for Everyone's Safety"</h3><br>
+                  <p>At RAV Services, we follow all industry regulations and work tirelessly to stay up-to-date with changing laws. </p><br> 
+                    <p>We are proud to be compliant with:
+                    <ul><li>Federal Motor Carrier Safety Administration (FMCSA) guidelines</li>
+                      <li>Department of Transportation (DOT) regulations</li>
+                      <li>State-specific laws and regulations</li>
+                      <li>Environmental safety standards</li>
+                    </ul>
+                    </p><br>
+                    <p>Our safety policies are designed to exceed industry standards and are continually updated to reflect the latest safety practices and technology advancements.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="prev" onclick="prevModal(4)">Previous</button>
+                  <button class="next" onclick="nextModal(4)">Next</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="modal5" class="modal">
+              <div class="modal-content">
+                <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+                <h2>Incident Reporting</h2>
+                <div class="modal-body">
+                  <img src="incident_report.jpg" alt="Incident Reporting">
+                    <h3>"Report an Incident"</h3><br>
+                  <p>If you have witnessed or been involved in an incident, please report 
+                    it to our Safety Department immediately. We take every report seriously and use this information to continually improve our safety processes.</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="prev" onclick="prevModal(5)">Previous</button>
+                  <button class="next" onclick="nextModal(5)">Next</button>
+                </div>
+              </div>
+            </div>
+
+
+          </div>  
+        </section>
+
+        <!-- review section starts  -->
+
+      <!-- <section class="review" id="review">
+        <h1 class="heading">customer's <span>review</span></h1>
+
+        <div class="box-container">
+          <div class="box">
+            <img src="images/quote-img.png" alt="customer review image" class="quote" />
+            <p>
+              Excellent product! Arrived faster than expected. Exceeded my quality expectations. Highly recommended, though
+              minor delivery process improvements could be made for a smoother experience.
+            </p>
+            <div class="customer-profile">
+              <img src="images/pic-1.jpg" class="user" alt="" />
+              <h3>Alice Kennedy</h3>
+              <div title="5 Stars" class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="images/quote-img.png" alt="customer review image" class="quote" />
+            <p>
+              The product is decent, but there were several issues with the packaging. It took longer than expected to
+              arrive, which significantly affected my overall satisfaction with the purchase. But the quality is best.
+            </p>
+            <div class="customer-profile">
+              <img src="images/pic-2.jpg" class="user" alt="" />
+              <h3>Sophia Miller</h3>
+              <div title="3 Stars" class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <img src="images/quote-img.png" alt="customer review image" class="quote" />
+            <p>
+              Overall, a good product. It met my expectations in terms of quality and functionality. However, there were
+              some minor issues with the delivery process that could be improved. But recommended you to try it.
+            </p>
+            <div class="customer-profile">
+              <img src="images/pic-3.jpg" class="user" alt="" />
+              <h3>Michael Peterson</h3>
+              <div title="4 Stars" class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- review section ends -->
+
+        <!-- Contact section starts -->
+        
+        <section class="contact" id="contact">
+          <h1 class="heading">Contact Us</h1>
+
+          <div class="row">
+            <!-- <iframe class="map" 
+              src="https://www.google.com/maps/embed/place/8+Romney+Ct,+Brampton,+ON+L6Z+3S2/@43.7185382,-79.7812826,17z/data=!3m1!4b1!4m6!3m5!1s0x882b167e9af01d0f:0x12c52cdb2fb0b761!8m2!3d43.7185382!4d-79.7812826!16s%2Fg%2F11cpjbftwq?entry=ttu&g_ep=EgoyMDI0MTAyMS4xIKXMDSoASAFQAw%3D%3D"
+              allowfullscreen="" loading="lazy"></iframe> -->
+            <img src="crossborder.png">
+
+              <form id="contactForm" onsubmit="return validateForm()">
+                <p>If you have any questions, concerns, or would like more information about our safety protocols, feel free to reach out to our team.</p>
+                <div class="inputBox">
+                  <span class="fas fa-user"></span>
+                  <input type="text" name="Name" placeholder="Enter Your Name" required />
+                </div>
+                <div class="inputBox">
+                  <span class="fas fa-envelope"></span>
+                  <input type="email" name="Email" placeholder="Enter Your Email Address" required />
+                </div>
+                <div class="inputBox">
+                  <span class="fas fa-phone"></span>
+                  <input type="tel" name="Number" id="numberInput" placeholder="Enter Your Number (Atleast 10 Digits)" required 
+                  oninput="this.value = this.value.replace(/\D/g,'')"/>
+                  <span id="numberError" class="error-message"></span>
+                </div>
+                <div class="inputBox">
+                  <span class="fas fa-message"></span>
+                  <input type="text" name="Message" placeholder="Enter The Message/Your Concern" required />
+                </div>
+                <input type="submit" value="contact now" class="btn" />
+                <div id="submitMessage" class="submit-message"></div>
+                
+              </form>
+
+          </div>
+        </section>
+
+          <!-- contact section ends -->
+
+      <!-- blogs section starts  -->
+      <!-- <section class="blogs" id="blogs">
+        <h1 class="heading">our <span>blogs</span></h1>
+
+        <div class="box-container">
+          <div class="box">
+            <div class="image">
+              <img src="images/blog-1.jpg" alt="https://unsplash.com/photos/brown-ceramic-teacup-XtUd5SiX464" />
+            </div>
+            <div class="content">
+              <a class="title">Exploring Coffee: Flavors and Cultures</a>
+              <span>by admin / June 27, 2024</span>
+              <p>
+                Discover the world of coffee—from Ethiopian Yirgacheffe to Colombian Supremo—exploring diverse flavors and
+                cultural richness in each sip.
+              </p>
+              <a title="Read More" onclick="openPopup(1)" class="btn">read more</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/blog-2.jpg"
+                alt="https://unsplash.com/photos/glass-cup-filled-with-ice-latte-on-tabletop-L-sm1B4L1Ns" />
+            </div>
+            <div class="content">
+              <a class="title">Coffee Chronicles: Global Exploration of Flavor</a>
+              <span>by admin / July 07, 2024</span>
+              <p>
+                Explore global coffee flavors from Jamaica Blue Mountain to Brazil's Santos, featuring Panama Geisha and
+                Kenya AA beans.
+              </p>
+              <a title="Read More" onclick="openPopup(2)" class="btn">read more</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="images/blog-3.jpg"
+                alt="https://unsplash.com/photos/white-ceramic-tea-cup-beside-white-flowers-FO4gzqI2t84" />
+            </div>
+            <div class="content">
+              <a class="title">Coffee Culture Chronicles: From Bean to Brew</a>
+              <span>by admin / March 03, 2024</span>
+              <p>
+                Embark on a sensory journey through coffee: trace its origins, explore diverse flavors, and discover
+                techniques for an elevated experience.
+              </p>
+              <a title="Read More" onclick="openPopup(3)" class="btn">read more</a>
+            </div>
+          </div>
+
+          // new
+          <div id="popup1" class="popup">
+            <span class="arrow left" onclick="openPopup(3)">&lt;</span>
+            <span class="arrow right" onclick="openPopup(2)">&gt;</span>
+            <span class="close-button" onclick="closePopup()">×</span>
+            <div class="content-Window">
+              <div class="heading-Window">Exploring Coffee: Flavors and Cultures</div>
+              <div class="date">Date: 2024-06-27</div>
+              <div class="description">Join us on a tantalizing journey through the rich tapestry of the world of coffee,
+                where every sip unveils a unique narrative. Experience the robust, earthy flavors of Ethiopian Yirgacheffe
+                and the smooth, velvety elegance of Colombian Supremo. Delve into the intricate artistry of various beans
+                and brewing methods that craft distinct and memorable coffee experiences. Whether you're a seasoned coffee
+                connoisseur or just embarking on your caffeinated adventure, this blog promises to ignite your senses,
+                deepen your understanding, and foster a newfound appreciation for this beloved beverage.</div>
+            </div>
+          </div>
+
+          <div id="popup2" class="popup">
+            <span class="arrow left" onclick="openPopup(1)">&lt;</span>
+            <span class="arrow right" onclick="openPopup(3)">&gt;</span>
+            <span class="close-button" onclick="closePopup()">×</span>
+            <div class="content-Window">
+              <div class="heading-Window">Coffee Chronicles: Global Exploration of Flavor</div>
+              <div class="date">Date: 2024-07-07</div>
+              <div class="description">Dive into the world of coffee with us as we embark on a global journey of flavor.
+                From the misty mountains of Jamaica Blue Mountain to the sun-drenched plantations of Brazil's Santos region,
+                each cup tells a tale of terroir and craftsmanship. Discover the nuances of specialty beans like Panama
+                Geisha and Kenya AA, and uncover brewing methods that bring out their best. Whether you're a curious
+                beginner or a seasoned enthusiast, let's explore how coffee connects cultures and captivates palates
+                worldwide.</div>
+            </div>
+          </div>
+
+          <div id="popup3" class="popup">
+            <span class="arrow left" onclick="openPopup(2)">&lt;</span>
+            <span class="arrow right" onclick="openPopup(1)">&gt;</span>
+            <span class="close-button" onclick="closePopup()">×</span>
+            <div class="content-Window">
+              <div class="heading-Window">Coffee Culture Chronicles: From Bean to Brew</div>
+              <div class="date">Date: 2024-03-03</div>
+              <div class="description">Embark on a sensory journey through the world of coffee, where each cup tells a
+                story. Explore diverse flavors, from the earthy tones of South American blends to the bright acidity of
+                African roasts. Discover brewing techniques that enhance these flavors, from pour-over to espresso. Join us
+                in celebrating the complexities and cultural richness that make coffee a beloved global phenomenon.</div>
+            </div>
+          </div>
+
+          <div id="overlay" class="overlay"></div>
+        </div>
+      </section> -->
+
+      <!-- blogs section ends -->
+    
+  <!-- footer section starts  -->
+
+  <section class="footer">
+    <h3>RAV Services Contact details:</h3>
+            
+    <div class="share">
+      <a href="xyz" target="_blank" class="fab fa-facebook-f"></a>
+      <a href="muskansachdvea05@gmail.com" target="_blank" class="fa fa-envelope"></a>
+      <a href="hhs" target="_blank" class="fab fa-instagram"></a>
+      <a href="dghs" target="_blank" class="fab fa-linkedin"></a>
+    </div>
+
+    <p class="contactdetails">
+      Phone: (437)971-7592<br>
+      Address: 8 Romney Court,Brampton,ON,CA (L6Z 3S2)<br>
+   </p>
+
+    <div class="links">
+      <p class="copyrightpara">© 2024 by @RAV Inc.</p>
+      <button id="upButton" onclick="scrollToTop()">
+        <span class="arrow-up"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- footer section ends -->
+      <!-- custom js file link  -->
+  <script src="ravScript.js"></script>
+</body>
+</html>
