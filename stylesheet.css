@@ -78,12 +78,17 @@ html {
 
   body {
     background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
   }
 
 section {
-    padding: 2rem 7%;
+    padding: 2rem 3%;
     overflow: hidden;
-    margin: 0; 
+    margin: 0 auto; 
+    width: 100%;
+
     /* background: #d3d3d3; */
     /* z-index: 0; */
 }
@@ -443,12 +448,13 @@ input:checked + .slider:before {
   overflow: hidden;
 }
 
+
 .about .row {
   display: flex;
   align-items: center;
   /* background: var(--container-bg); */
   box-shadow: var(--box-shadow);
-  flex-wrap: wrap;
+  flex-wrap: wrap
   /* z-index: -1; */
 }
 
@@ -650,33 +656,27 @@ input:checked + .slider:before {
 } */
 
 .modal {
-  display: none;
+  display: none; /* Keep modal hidden by default */
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  position: fixed;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 510px;
-  padding: 20px;
-  background-color: var(--white);
+  z-index: 9999; /* Ensure it's on top */
+  width: 80%; /* Base width for larger screens */
+  max-width: 700px;
+  max-height: 90%; /* Prevents overflow on smaller screens */
+  overflow-y: auto;
+  background-color:var(--white2);
+  color: var(--onyx);
   border-radius: 10px;
   box-shadow: var(--modal-box-shadow);
-  /* z-index: 1000; */
-  animation: fadeIn 0.5s forwards, slideIn 0.5s forwards;
-  
-  overflow: visible;
+}
+
+/* Inner modal content */
+.modal-content {
+  padding: 20px;
+  max-height: 85vh; /* Set max height to prevent overflow */
+  overflow-y: auto; /* Enable scrolling if content overflows */
 }
 
 .modal-header {
@@ -1007,7 +1007,7 @@ input:checked + .slider:before {
     max-height: 40rem;
   }
   .modal-footer {
-    margin-top: 4rem;
+    margin-top: 3.5rem;
   }
   .modal-content p {
     font-size: 1.8rem;
@@ -1023,7 +1023,7 @@ input:checked + .slider:before {
   }
 
   section {
-    padding: 9rem;
+    padding: 7rem;
   }
 }
 
@@ -1111,11 +1111,16 @@ input:checked + .slider:before {
   .contact .row form {
     flex: 1 1 30rem;
   }
+  .modal {
+    width: 90%;      
+    padding: 15px;  
+    max-height: 85%;  
+  }
 }
 
 @media (max-width: 620px) {
   .modal {
-    width: 420px;
+    width: 460px;
     margin: 2rem 2rem;
   }
   .popup {
@@ -1168,9 +1173,9 @@ input:checked + .slider:before {
     padding: 0px 7px;
   }
   .modal {
-    width: 290px;
+    width: 300px;
     top: 47%;
-    margin: 0rem;
+    /* margin: 0rem; */
   }
   .cart-badge {
     right: 104px;
@@ -1190,7 +1195,7 @@ input:checked + .slider:before {
 
 @media (max-width: 376px) {
   section {
-    padding: 4rem;
+    padding: 2rem;
   }
   .switch {
     display: none;
