@@ -1031,6 +1031,9 @@ input:checked + .slider:before {
     #menu-btn {
     display: inline-block;
   }
+  .home .bgimg {
+    width: 100%;
+  }
   .about .row .image img {
     width: 100%;
   }
@@ -1060,11 +1063,11 @@ input:checked + .slider:before {
     justify-content: center;
   } */
   .home .content h3 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-shadow: 3px 2px 2px black;
   }
   .home .content h4 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 /*     color: #fff; */
     /* text-align: center; */
     /* line-height: 1.8; */
@@ -1079,15 +1082,26 @@ input:checked + .slider:before {
     /* Adjust sections */
     .about .content, .services .box, .contact form {
         width: 100%;
-/*         padding: 5px; */
+        padding: 5px;
     }
+   .about .row .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
     /* Modify modals for mobile */
-    .modal-content {
-        width: 90%;
+    .modal {
+    width: 90%;
+    width: 650px;
+    top: 45%;
+  }
+   .modal-content {
+        width: 95%;
+        padding: 5px;
     }
     .btn {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 }
 
