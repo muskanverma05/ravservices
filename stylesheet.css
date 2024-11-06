@@ -1118,7 +1118,7 @@ input:checked + .slider:before {
   .modal-content {
     width: 90%;
     padding: 5px;
-    marging: 3px;
+    margin: 3px;
   }
 /*   .modal-body {
     padding: 5px;
@@ -1147,7 +1147,7 @@ input:checked + .slider:before {
   .modal-content {
     width: 90%;
     padding: 5px;
-    marging: 3px;
+    margin: 3px;
   }
 }
 
@@ -1167,7 +1167,7 @@ input:checked + .slider:before {
    .modal-content {
     width: 90%;
     padding: 5px;
-    marging: 3px;
+    margin: 3px;
   }
 }
 
