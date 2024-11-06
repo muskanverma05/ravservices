@@ -1041,7 +1041,7 @@ input:checked + .slider:before {
     width: 100%;
   }
   .about .row .content {
-  flex: 1 1 45rem;
+  flex: 1 1 40rem;
   padding: 1rem;
   }
   .header .navbar {
@@ -1112,7 +1112,7 @@ input:checked + .slider:before {
     }
 }
 
-@media (max-width: 763px) {
+@media (max-width: 768px) {
   .contact .row form {
     flex: 1 1 30rem;
   }
@@ -1121,6 +1121,16 @@ input:checked + .slider:before {
     padding: 10px;  
     max-height: 85%;  
   }
+      /* Adjust sections */
+    .about .content, .services .box, .contact form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Modify modals for mobile */
+    .modal-content {
+        width: 90%;
+    }
 }
 
 @media (max-width: 520px) {
@@ -1145,37 +1155,8 @@ input:checked + .slider:before {
     }
 }
 
-/* Small Mobile View */
-@media (max-width: 480px) {
-    /* Further reduce font sizes */
 
-  .header {
-    padding: 0px 7px;
-  }
-  .modal {
-    width: 90px;
-    top: 45%;
-    /* margin: 0rem; */
-  }
-  .modal-body {
-    max-height: 43rem;
-  } 
-    /* Stack icons vertically */
-    .icons {
-    flex-direction: column;
-    }
-    /* Full-width buttons */
-    .btn {
-    width: 100%;
-    }
-    /* Adjust modal layout */
-    .modal-content {
-    width: 95%;
-    padding: 10px;
-    }
-}
-
-@media (max-width: 376px) {
+/* @media (max-width: 376px) {
   section {
     padding: 1.5rem;
   }
@@ -1190,5 +1171,5 @@ input:checked + .slider:before {
   input:checked + .slider:before {
     transform: translateX(22px);
   }
-}
+} */
 
