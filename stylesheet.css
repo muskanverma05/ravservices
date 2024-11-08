@@ -1164,10 +1164,39 @@ input:checked + .slider:before {
   input:checked + .slider:before {
     transform: translateX(22px);
   }
+  .modal {
+    width: 90%;
+    top: 50%;
+  }
+  .modal-content {
+    width: 100%;
+    /* padding: 5px;
+    margin: 3px; */
+  }
+    .modal-body {
+    padding: 5px;
+  }
+  .btn {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 357px) {
   .fa-search:before {
     display: none;
   }
-}
+  .modal {
+    width: 90%;
+    top: 50%;
+  }
+  .modal-content {
+    width: 100%;
+    /* padding: 5px;
+    margin: 3px; */
+  }
+    .modal-body {
+    padding: 5px;
+  }
+  .btn {
+    font-size: 1.5rem;
+  }
