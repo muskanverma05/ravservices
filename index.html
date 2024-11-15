@@ -13,6 +13,16 @@
     <!-- custom css file link  -->
   <link rel="stylesheet" href="stylesheet.css" />
 
+    <!-- custom js file link  -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="ravScript.js"></script>
+
+    <script type="text/javascript">
+        (function() {
+           emailjs.init("nLzCGJ4kiDmtgC3lM");
+        })();
+    </script>
+
     <!-- favicon -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 </head>
@@ -499,7 +509,7 @@
               allowfullscreen="" loading="lazy"></iframe> -->
             <img src="crossborder.png">
 
-              <form id="contactForm" onsubmit="return validateForm()">
+              <form id="contactForm" method="POST" onsubmit="sendMail(event)">
                 <p>If you have any questions, concerns, or would like more information about our safety protocols, feel free to reach out to our team.</p>
                 <div class="inputBox">
                   <span class="fas fa-user"></span>
@@ -511,128 +521,24 @@
                 </div>
                 <div class="inputBox">
                   <span class="fas fa-phone"></span>
-                  <input type="tel" name="Number" id="numberInput" placeholder="Enter Your Number" required 
-                  oninput="this.value = this.value.replace(/\D/g,'')"/>
+                  <input type="tel" name="Number" id="numberInput" placeholder="Enter Your Number (Atleast 10 Digits)" required 
+                    oninput="this.value = this.value.replace(/\D/g,'')"/>
                   <span id="numberError" class="error-message"></span>
                 </div>
                 <div class="inputBox">
                   <span class="fas fa-message"></span>
-                  <input type="text" name="Message" placeholder="Enter Your Concern" required />
+                  <input type="text" name="Message" placeholder="Enter The Message/Your Concern" required />
                 </div>
-                <input type="submit" value="contact now" class="btn" />
-                <div id="submitMessage" class="submit-message"></div>
+                <!-- <input type="submit" value="Submit----" name="submit" class="btn"> -->
                 
+                <button type="submit" class="btn">Submit</button>
+                <div id="submitMessage" class="submit-message"></div> 
               </form>
 
           </div>
         </section>
 
           <!-- contact section ends -->
-
-      <!-- blogs section starts  -->
-      <!-- <section class="blogs" id="blogs">
-        <h1 class="heading">our <span>blogs</span></h1>
-
-        <div class="box-container">
-          <div class="box">
-            <div class="image">
-              <img src="images/blog-1.jpg" alt="https://unsplash.com/photos/brown-ceramic-teacup-XtUd5SiX464" />
-            </div>
-            <div class="content">
-              <a class="title">Exploring Coffee: Flavors and Cultures</a>
-              <span>by admin / June 27, 2024</span>
-              <p>
-                Discover the world of coffee—from Ethiopian Yirgacheffe to Colombian Supremo—exploring diverse flavors and
-                cultural richness in each sip.
-              </p>
-              <a title="Read More" onclick="openPopup(1)" class="btn">read more</a>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="image">
-              <img src="images/blog-2.jpg"
-                alt="https://unsplash.com/photos/glass-cup-filled-with-ice-latte-on-tabletop-L-sm1B4L1Ns" />
-            </div>
-            <div class="content">
-              <a class="title">Coffee Chronicles: Global Exploration of Flavor</a>
-              <span>by admin / July 07, 2024</span>
-              <p>
-                Explore global coffee flavors from Jamaica Blue Mountain to Brazil's Santos, featuring Panama Geisha and
-                Kenya AA beans.
-              </p>
-              <a title="Read More" onclick="openPopup(2)" class="btn">read more</a>
-            </div>
-          </div>
-
-          <div class="box">
-            <div class="image">
-              <img src="images/blog-3.jpg"
-                alt="https://unsplash.com/photos/white-ceramic-tea-cup-beside-white-flowers-FO4gzqI2t84" />
-            </div>
-            <div class="content">
-              <a class="title">Coffee Culture Chronicles: From Bean to Brew</a>
-              <span>by admin / March 03, 2024</span>
-              <p>
-                Embark on a sensory journey through coffee: trace its origins, explore diverse flavors, and discover
-                techniques for an elevated experience.
-              </p>
-              <a title="Read More" onclick="openPopup(3)" class="btn">read more</a>
-            </div>
-          </div>
-
-          // new
-          <div id="popup1" class="popup">
-            <span class="arrow left" onclick="openPopup(3)">&lt;</span>
-            <span class="arrow right" onclick="openPopup(2)">&gt;</span>
-            <span class="close-button" onclick="closePopup()">×</span>
-            <div class="content-Window">
-              <div class="heading-Window">Exploring Coffee: Flavors and Cultures</div>
-              <div class="date">Date: 2024-06-27</div>
-              <div class="description">Join us on a tantalizing journey through the rich tapestry of the world of coffee,
-                where every sip unveils a unique narrative. Experience the robust, earthy flavors of Ethiopian Yirgacheffe
-                and the smooth, velvety elegance of Colombian Supremo. Delve into the intricate artistry of various beans
-                and brewing methods that craft distinct and memorable coffee experiences. Whether you're a seasoned coffee
-                connoisseur or just embarking on your caffeinated adventure, this blog promises to ignite your senses,
-                deepen your understanding, and foster a newfound appreciation for this beloved beverage.</div>
-            </div>
-          </div>
-
-          <div id="popup2" class="popup">
-            <span class="arrow left" onclick="openPopup(1)">&lt;</span>
-            <span class="arrow right" onclick="openPopup(3)">&gt;</span>
-            <span class="close-button" onclick="closePopup()">×</span>
-            <div class="content-Window">
-              <div class="heading-Window">Coffee Chronicles: Global Exploration of Flavor</div>
-              <div class="date">Date: 2024-07-07</div>
-              <div class="description">Dive into the world of coffee with us as we embark on a global journey of flavor.
-                From the misty mountains of Jamaica Blue Mountain to the sun-drenched plantations of Brazil's Santos region,
-                each cup tells a tale of terroir and craftsmanship. Discover the nuances of specialty beans like Panama
-                Geisha and Kenya AA, and uncover brewing methods that bring out their best. Whether you're a curious
-                beginner or a seasoned enthusiast, let's explore how coffee connects cultures and captivates palates
-                worldwide.</div>
-            </div>
-          </div>
-
-          <div id="popup3" class="popup">
-            <span class="arrow left" onclick="openPopup(2)">&lt;</span>
-            <span class="arrow right" onclick="openPopup(1)">&gt;</span>
-            <span class="close-button" onclick="closePopup()">×</span>
-            <div class="content-Window">
-              <div class="heading-Window">Coffee Culture Chronicles: From Bean to Brew</div>
-              <div class="date">Date: 2024-03-03</div>
-              <div class="description">Embark on a sensory journey through the world of coffee, where each cup tells a
-                story. Explore diverse flavors, from the earthy tones of South American blends to the bright acidity of
-                African roasts. Discover brewing techniques that enhance these flavors, from pour-over to espresso. Join us
-                in celebrating the complexities and cultural richness that make coffee a beloved global phenomenon.</div>
-            </div>
-          </div>
-
-          <div id="overlay" class="overlay"></div>
-        </div>
-      </section> -->
-
-      <!-- blogs section ends -->
     
   <!-- footer section starts  -->
 
@@ -661,7 +567,5 @@
   </section>
 
   <!-- footer section ends -->
-      <!-- custom js file link  -->
-  <script src="ravScript.js"></script>
 </body>
 </html>
