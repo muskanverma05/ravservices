@@ -229,36 +229,47 @@ function toggleHeartColor(icon) {
     icon.classList.toggle('red-heart');
 }
 
-function validateForm() {
-  var name = document.getElementById('contactForm').elements['Name'].value;
-  var email = document.getElementById('contactForm').elements['Email'].value;
-  var number = document.getElementById('contactForm').elements['Number'].value;
-  var message = document.getElementById('contactForm').elements['Message'].value;
+function sendMail(event) {
+  event.preventDefault(); // Prevents form from reloading
 
+  const name = document.getElementById('contactForm').elements['Name'].value;
+  const email = document.getElementById('contactForm').elements['Email'].value;
+  const number = document.getElementById('contactForm').elements['Number'].value;
+  const message = document.getElementById('contactForm').elements['Message'].value;
+
+  // Phone validation
   if (!/^\d{10,}$/.test(number)) {
-    document.getElementById('numberError').textContent = '';
-    showErrorMessage();
-    return false;
+      document.getElementById('numberError').textContent = 'Please enter a valid phone number (At least 10 digits).';
+      showErrorMessage();
+      return;
   } else {
-    document.getElementById('numberError').textContent = '';
-    showSuccessMessage();
-    return false;
+      document.getElementById('numberError').textContent = ''; // Clear any previous error message
   }
+
+  const params = { name, email, number, message };
+
+  emailjs.send("service_wy0g7mt", "template_xp1t7dr", params)
+      .then(function (response) {
+          showSuccessMessage();
+          document.getElementById('contactForm').reset();
+      })
+      .catch(function (error) {
+          showErrorMessage();
+      });
 }
 
 function showSuccessMessage() {
-  var successDiv = document.getElementById('submitMessage');
+  const successDiv = document.getElementById('submitMessage');
   successDiv.textContent = '✅ Thank you for contacting us!';
   successDiv.style.color = '#03fc03';
   successDiv.style.display = 'block';
-  document.getElementById('contactForm').reset();
 }
 
 function showErrorMessage() {
-  var successDiv = document.getElementById('submitMessage');
-  successDiv.textContent = '❌ Please enter a valid phone number (At Least 10 Digits🙁).';
-  successDiv.style.color = '#ff0019';
-  successDiv.style.display = 'block';
+  const errorDiv = document.getElementById('submitMessage');
+  errorDiv.textContent = '❌ Failed to send message. Please try again.';
+  errorDiv.style.color = '#ff0019';
+  errorDiv.style.display = 'block';
 }
 
 // document.addEventListener("DOMContentLoaded", function () {
