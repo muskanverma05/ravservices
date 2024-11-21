@@ -11,18 +11,16 @@
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
     <!-- custom css file link  -->
-  <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
 
     <!-- custom js file link  -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="ravScript.js"></script>
-
     <script type="text/javascript">
         (function() {
            emailjs.init("nLzCGJ4kiDmtgC3lM");
         })();
     </script>
-
+    
     <!-- favicon -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 </head>
@@ -30,473 +28,621 @@
 <body>
     <!-- header section  -->
 
-      <header class="header">
-        
-    <a href class="logo">RAV Services</a>
+  <header class="header">
+    <div class="logo-container">
+      <div class="logo-box">
+        <img src="logo.png" alt="RAV Services Logo" class="logo-image" />
+      </div>  
+        <a href="#" class="logo">RAV Services</a>
+    </div>
 
     <nav class="navbar">
-      <a href="#home">home</a>
-      <a href="#about">about</a>
-      <!-- <a href="#menu">menu</a> -->
-      <a href="#services">services</a>
-      <!-- <a href="#review">review</a> -->
-      <a href="#contact">contact</a>
-      <!-- <a href="#blogs">blogs</a> -->
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICES</a>
+      <a href="#contact">CONTACT</a>
     </nav>
 
-    <div class="icons">
-      <div class="fas fa-search" id="search-btn"></div>
-      <!-- <div class="fas fa-shopping-cart" id="cart-btn"><span class="cart-badge" id="cart-badge">0</span></div> -->
-      <label class="switch" id="darkModeLabel" title="Dark mode: off">
-        <input type="checkbox" id="darkModeToggle" />
-        <span class="slider"></span>
-      </label>
-      <div class="fas fa-bars" id="menu-btn"></div>
-    </div>
-
-    <div class="search-form">
-      <input type="search" id="search-box" placeholder="search here..." />
-      <label for="search-box" class="fas fa-search"></label>
-    </div>
-
-    <!-- <div class="cart-items-container" id="cart-items-container">
-      <h1>Cart</h1>
-      <div id="cart-items"></div>
-      <p id="empty-cart-message">No items in the cart.</p>
-      <div class="cart-total" id="cart-total">
-        <p>Total Items: <span id="total-items">0</span></p>
-        <p>Total: <span id="total-price">0.00</span></p>
-        <p>Taxes (10%): <span id="taxes">0.00</span></p>
-        <p>Total with Taxes: <span id="final-total-price">0.00</span></p>
-        <button class="btn btn-checkout" onclick="checkout()">Checkout Now</button>
+    <div class="header-right">
+      <a href="#contact" class="connect" id="connect">Let's Connect</a>
+      <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
       </div>
-      <div id="notification-main-screen" class="notification-main-screen"></div>
-    </div> -->
+    </div>
+
   </header>
     
-    <!-- header section ends -->
+  <!-- header section ends -->
 
+  <!-- home section starts  -->
+  <section class = "home" id="home">
+    <div class="content">
+      <!-- <h3>Safety First, Every Mile of the Way...</h3> -->
+      <h3>Welcome to RAV SERVICES</h3>
+      <h4>"Your Trusted Partner in Trucking Safety and Services"</h4>
+        <p>
+          At RAV SERVICES, we understand the challenges trucking companies face in navigating 
+          the complex landscape of safety and regulatory compliance. Our mission is to provide tailored 
+          solutions that ensure your fleet operates safely, efficiently, and in full compliance with 
+          industry standards.
+        </p>
+        <!-- <p>
+          At RAV Services, safety isn't just a priority - it's a commitment. 
+          As a leading trucking company, we understand the responsibility that comes with being on the road. 
+          Our safety department ensures that every mile is traveled with the highest standards of care, 
+          protecting our drivers, the cargo, and everyone we share the road with.
+        </p> -->
+        <!-- <a href="#about" class="btn"> Ready to explore about us <span class="arrowLong">&#10230;</span> </a> -->
+        <a href="#services" class="btn"> Ready to explore our services <span class="arrowLong">&#10230;</span> </a>
+    </div>
+  </section>
 
+  <!-- home section ends -->
+
+  <!-- about section starts  -->
+  <section class="about" id="about" >
+    <h1 class="heading">About Us</h1>
     
-        <!-- home section starts  -->
-        <section class = "home" id="home">
-          <div class="bgimg"></div>
-          <div class="content">
-            <h3>Safety First, Every Mile of the Way...</h3>
-            <h4>"Committed to Safe Transportation"</h4>
-              <p>
-                At RAV Services, safety isn't just a priority - it's a commitment. 
-                As a leading trucking company, we understand the responsibility that comes with being on the road. 
-                Our safety department ensures that every mile is traveled with the highest standards of care, 
-                protecting our drivers, the cargo, and everyone we share the road with.
-              </p>
-              <a href="#services" class="btn"> Ready to explore our services <span class="arrowLong">&#10230;</span> </a>
-          </div>
-        </section>
+    <div class="row">
+      
+      <div class="image">
+        <img src="assets/about.png" alt="" >
+      </div>
 
-        <!-- home section ends -->
+      <div class="content">
+        <h3>what makes our company special?</h3>
+          <h4>"Commitment to Safe Transportation"</h4>
 
-        <!-- about section starts  -->
-        <section class="about" id="about" >
-          <!-- <h1 class="heading"><span>About</span> Us</h1> -->
-          <h1 class="heading">About Us</h1>
-
-          <!-- <div class="about-bg">
-            <img src="4.jpg" alt="">
-          </div> -->
-          <div class="row">
-            
-            <div class="image">
-              <img src="about-img.png" alt="" >
+        <!-- <h4>"Protecting our drivers, cargo, and community with top-tier safety practices."</h4> -->
+        <p>
+          RAV Services stands out in the trucking industry with its comprehensive training programs, 
+          advanced technology, proactive safety culture, audits handling, permit filing, policies, 
+          commitment to driver screening, training, and wellness.</p> 
+        <p>Our rigorous compliance standards and community engagement ensure safety for our drivers 
+          and the communities we serve.
+        </p>
+        <a class="btn" id="openModalButton">Why choose RAV SERVICES? </a>
+        <div class="modal" id="myModal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Why choose RAV SERVICES?</h2>
+              <button class="close-button" id="closeModalButton">&times;</button>
             </div>
-
-            <div class="content">
-              <h3>what makes our company special?</h3>
-              <h4>"Protecting our drivers, cargo, and community with top-tier safety practices."</h4>
-              <p>
-                RAV Services stands out in the trucking industry with its comprehensive training programs, 
-                advanced technology, proactive safety culture, and commitment to driver wellness.</p> 
-              <p>Our rigorous compliance standards and community engagement ensure safety for our drivers 
-                and the communities we serve.
-              </p>
-              <a class="btn" id="openModalButton">Our Story...</a>
-              <div class="modal" id="myModal">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h2 class="modal-title">Our Story...</h2>
-                    <button class="close-button" id="closeModalButton">&times;</button>
-                  </div>
-                  <div class="modal-body">
-                    <p>Our Safety Department is the backbone of our operation, 
-                      ensuring that all drivers, vehicles, and procedures are in line with federal and state regulations. 
-                      With a dedicated team of safety professionals, we make sure that our fleet meets the highest standards, 
-                      and our drivers receive ongoing training to keep everyone safe on the road.
-                  </div>
-                </div>
-              </div>
-          </div> 
-        </section>
-        <!-- about section ends -->
-
-          <!-- menu section starts  -->
-      <!-- <section class="menu" id="menu">
-        <h1 class="heading">ourmenu</h1>
-
-        <div class="box-container">
-          <div class="box">
-            <img src="images/menu-1.png" alt="" />
-            <h3>Espresso</h3>
-            <div class="price">$2.50 <span>3.25</span></div>
-            <a title="Add To Cart" id="clickButton1" class="btn" onclick="addToCart('Espresso', 2.50)">add to cart</a>
-          </div>
-
-          <div class="box">
-            <img src="images/menu-2.png" alt="" />
-            <h3>Latte</h3>
-            <div class="price">$3.50 <span>5.50</span></div>
-            <a title="Add To Cart" id="clickButton2" class="btn" onclick="addToCart('Latte', 3.50)">add to cart</a>
-          </div>
-
-          <div class="box">
-            <img src="images/menu-3.png" alt="" />
-            <h3>Cappuccino</h3>
-            <div class="price">$3.75 <span>4.75</span></div>
-            <a title="Add To Cart" class="btn" onclick="addToCart('Cappuccino', 3.75)">add to cart</a>
-          </div>
-
-          <div class="box">
-            <img src="images/menu-4.png" alt="" />
-            <h3>Americano</h3>
-            <div class="price">$2.75 <span>3.99</span></div>
-            <a title="Add To Cart" class="btn" onclick="addToCart('Americano', 2.75)">add to cart</a>
-          </div>
-
-          <div class="box">
-            <img src="images/menu-5.png" alt="" />
-            <h3>Mocha</h3>
-            <div class="price">$4.00 <span>4.99</span></div>
-            <a title="Add To Cart" class="btn" onclick="addToCart('Mocha', 4.00)">add to cart</a>
-          </div>
-
-          <div class="box">
-            <img src="images/menu-6.png" alt="" />
-            <h3>Macchiato</h3>
-            <div class="price">$3.25 <span>4.80</span></div>
-            <a title="Add To Cart" class="btn" onclick="addToCart('Macchiato', 3.25)">add to cart</a>
+            <div class="modal-body">
+              <p>At RAV SERVICES, we go beyond traditional safety and compliance services. 
+                With over 16 years of industry leadership, we are redefining the standards of excellence 
+                for trucking companies nationwide. Our mission is to empower businesses with innovative 
+                solutions that ensure safety, enhance efficiency, and drive long-term success.</p>
+              <p>Our Safety Services are the backbone of our operation, 
+                ensuring that all drivers, vehicles, and procedures are in line with federal and state regulations. 
+                With a dedicated team of safety professionals, we make sure that our fleet meets the highest standards, 
+                and our drivers receive ongoing training to keep everyone safe on the road.
+            </div>
           </div>
         </div>
-      </section> -->
+      </div>
+    </div> 
 
-      <!-- menu section ends -->
+    <div class="trust-section">
+        <div class="trust-banner">
+          <h2>A Company You Can Trust</h2>
+        </div>
+        <div class="trust-features">
+          <div class="feature-box" onclick="openModal(10)" >
+            <p>Proactive Safety Solutions</p>
+          </div>
+          <div class="feature-box highlight" onclick="openModal(11)">
+            <p>Comprehensive Compliance Management</p>
+          </div>
+          <div class="feature-box" onclick="openModal(12)">
+            <p>24/7 Support You Can Count On</p>
+          </div>
+          <div class="feature-box highlight" onclick="openModal(13)">
+            <p>Driver-Centric Initiatives</p>
+          </div>
+        </div>
+    </div>
 
-        <!-- services section starts -->
-        <section class="services" id="services">
-          <h1 class="heading">our services</h1>
-      
-          <div class="box-container">
-            <div class="box">
-              <div class="icons">
-                <!-- <a title="Add To Cart" class="fas fa-shopping-cart" onclick="addToCart('Safety Training and Certification', 25.40)"></a> -->
-                <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
-                <a title="Safety Training and Certification" onclick="openModal(1)" class="fas fa-eye"></a>
-              </div>
-              <div class="image">
-                <img src="safety_certification.png" alt="safety_certification" />
-              </div>
-              <div class="content">
-                <h3>Safety Training and Certification</h3>
-                <!-- <div title="5 Stars" class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <div class="price">$25.40 <span>$28.99</span></div> -->
-              </div>
-            </div>
-      
-            <div class="box">
-              <div class="icons">
-                <!-- <a title="Add To Cart" class="fas fa-shopping-cart" onclick="addToCart('Colombian coffee', 20.99)"></a> -->
-                <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
-                <a title="Safety Technology" onclick="openModal(2)" class="fas fa-eye"></a>
-              </div>
-              <div class="image">
-                <img src="safety_technology.jpg" alt="safety_technology" />
-              </div>
-              <div class="content">
-                <h3>Safety Technology</h3>
-                <!-- <div title="4 Stars" class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fa-regular fa-star"></i>
-                </div>
-                <div class="price">$20.99 <span>$25.99</span></div> -->
-              </div>
-            </div>
-      
-            <div class="box">
-              <div class="icons">
-                <!-- <a title="Add To Cart" class="fas fa-shopping-cart" onclick="addToCart('Peru coffee', 15.99)"></a> -->
-                <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
-                <a title="driver wellness and support" onclick="openModal(3)" class="fas fa-eye"></a>
-              </div>
-              <div class="image">
-                <img src="driver_wellness.jpg" alt="wellness_support" />
-              </div>
-              <div class="content">
-                <h3>Driver Wellness & Support</h3>
-                <!-- <div title="4.5 Stars" class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">$15.99 <span>$20.99</span></div> -->
-              </div>
-            </div>
 
-            <div class="box">
-              <div class="icons">
-                <!-- <a title="Add To Cart" class="fas fa-shopping-cart" onclick="addToCart('Peru coffee', 15.99)"></a> -->
-                <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
-                <a title="Compliance & Policies" onclick="openModal(4)" class="fas fa-eye"></a>
-              </div>
-              <div class="image">
-                <img src="truck_policies.png" alt="" />
-              </div>
-              <div class="content">
-                <h3>Compliance & Policies</h3>
-                <!-- <div title="4.5 Stars" class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">$15.99 <span>$20.99</span></div> -->
-              </div>
-            </div>
+    <div id="modal10" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+        <h2>Proactive Safety Solutions</h2>
+        <div class="modal-body">
+          <p>Safety doesn't happen by accident. We take a proactive approach, 
+          anticipating potential risks and addressing them before they impact your 
+          business.
+          </p>
+          <p> By leveraging advanced safety protocols and innovative strategies, 
+            we create a safer environment for your drivers, vehicles, and cargo, 
+            ensuring long-term success on the road.</p>
+        </div>
+      </div>
+    </div>
 
-            <div class="box">
-              <div class="icons">
-                <!-- <a title="Add To Cart" class="fas fa-shopping-cart" onclick="addToCart('Peru coffee', 15.99)"></a> -->
-                <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
-                <a title="Incident Reporting" onclick="openModal(5)" class="fas fa-eye"></a>
-              </div>
-              <div class="image">
-                <img src="incident_report.jpg" alt="" />
-              </div>
-              <div class="content">
-                <h3>Incident Reporting</h3>
-                <!-- <div title="4.5 Stars" class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">$15.99 <span>$20.99</span></div> -->
-              </div>
-            </div>
-            
-            <!-- new -->
-            <div id="modal1" class="modal">
-              <div class="modal-content">
-                <span class="close-button" id="close" onclick="closeModal()">&times;</span>
-                <h2>Safety Training and Certification</h2>
-                <div class="modal-body">
-                  <img src="safety_certification.png" alt="Safety Training and Certification Image">
-                    <h3>"Training Our Drivers for Success"</h3><br>
-                      <p>Safety starts with proper training. Our drivers go through rigorous training programs, 
-                        including certification courses, to ensure they are equipped with the knowledge and skills necessary to drive safely.</p>
-                      <p>Our training covers:
-                          <ul class="modal-list">
-                            <li><i class="fas fa-angle-right"></i> GPS tracking and route optimization to minimize risk</li>
-                            <li><i class="fas fa-angle-right"></i> Onboard cameras and telematics to monitor driver behavior</li>
-                            <li><i class="fas fa-angle-right"></i> Electronic logging devices (ELDs) to comply with Hours of Service regulations</li>
-                            <li><i class="fas fa-angle-right"></i> Collision avoidance systems</li>
-                            <li><i class="fas fa-angle-right"></i> Real-time weather and traffic updates for safe navigation</li>
-                        </ul>
-                      </p>
-                      <p>We also provide ongoing refresher courses to keep our drivers updated on the latest safety regulations and practices.</p>
-                </div>
-                <div class="modal-footer">
-                  <button class="prev" onclick="prevModal(1)">Previous</button>
-                  <button class="next" onclick="nextModal(1)">Next</button>
-                </div>
-              </div>
-            </div>
+    <div id="modal11" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+        <h2>Comprehensive Compliance Management</h2>
+        <div class="modal-body">
+          <p>Managing compliance can be overwhelming, but with RAV SERVICES, 
+            it's effortless. 
+            <ul class="modal-list">
+                <li><i class="fas fa-angle-right"></i> We handle everything from DOT audits to driver qualification files, the details so you can focus on the road.</li>
+                <li><i class="fas fa-angle-right"></i> We ensure your operations meet and exceed regulatory standards.</li>
+                <li><i class="fas fa-angle-right"></i> By taking care of the critical details, we give you peace of mind and the freedom to focus on growing your business.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal12" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+        <h2>24/7 Support You Can Count On</h2>
+        <div class="modal-body">
+          <p>Transportation never stops, and neither do we. 
+            <ul class="modal-list">
+                <li><i class="fas fa-angle-right"></i> Our dedicated team is available around the clock to address compliance inquiries, safety concerns, or operational emergencies.</li>
+                <li><i class="fas fa-angle-right"></i> Whether it’s a quick question or an urgent issue, you can trust RAV SERVICES to provide timely, expert assistance whenever and wherever you need it.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal13" class="modal">
+      <div class="modal-content">
+        <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+        <h2>Driver-Centric Initiatives</h2>
+        <div class="modal-body">
+          <p>Happy drivers are safe drivers. 
+            <ul class="modal-list">
+                <li><i class="fas fa-angle-right"></i> We believe that happy, well-supported drivers are the foundation of a safe and successful fleet.</li>
+                <li><i class="fas fa-angle-right"></i> RAV SERVICES  prioritizes driver education, wellness programs, and continuous engagement to foster a culture of safety and trust. </li>
+                <li><i class="fas fa-angle-right"></i> By empowering drivers with the tools and resources they need, we create safer roads and stronger businesses.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <!-- about section ends -->
+
+  <!-- services section starts -->
+  <section class="services" id="services">
+    <h1 class="heading">our services</h1>
+
+    <div class="box-container">
+      <div class="box"  onclick="openModal(1)">
+        <div class="icons">
+          <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+          <a title="Driver Trainig & Certification: Open It" onclick="openModal(1)" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="assets/safety.png" alt="safety_certification" />
+        </div>
+        <div class="content">
+          <h3>DRIVER TRAINING & CERTIFICATION</h3>
+        </div>
+      </div>
+
+      <div class="box" onclick="openModal(2)">
+        <div class="icons">
+          <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+          <a title="Audits: Open It" onclick="openModal(2)" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="assets/audit.avif" alt="audits" />
+        </div>
+        <div class="content">
+          <h3>AUDITS</h3>
+        </div>
+      </div>
+
+      <div class="box" onclick="openModal(3)">
+        <div class="icons">
+          <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+          <a title="Trucking Authority Services: Open It" onclick="openModal(3)" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="assets/truck1.jpeg" alt="Trucking Authority Services" />
+        </div>
+        <div class="content">
+          <h3>TRUCKING AUTHORITY SERVICES</h3>
+        </div>
+      </div>
+
+      <div class="box" onclick="openModal(4)">
+        <div class="icons">
+          <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+          <a title="Policies: Open It" onclick="openModal(4)" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="assets/policy.webp" alt="" />
+        </div>
+        <div class="content">
+          <h3>POLICIES</h3>
+        </div>
+      </div>
+
+      <div class="box" onclick="openModal(5)">
+        <div class="icons">
+          <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+          <a title="Accident & Risk Management: Open It" onclick="openModal(5)" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="assets/risk.jpg" alt="Accident & Risk Management" />
+        </div>
+        <div class="content">
+          <h3>ACCIDENT & RISK MANAGEMENT</h3>
+        </div>
+      </div>
+
+      <div class="box" onclick="openModal(6)">
+        <div class="icons">
+          <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+          <a title="Permits: Open It" onclick="openModal(6)" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="assets/permit2.avif" alt="Permits" />
+        </div>
+        <div class="content">
+          <h3>PERMITS</h3>
+        </div>
+      </div>
+
+      <div class="box" onclick="openModal(7)">
+        <div class="icons">
+          <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+          <a title="Bond Services: Open It" onclick="openModal(7)" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="assets/bond.jpeg" alt="Bond Services" />
+        </div>
+        <div class="content">
+          <h3>BOND SERVICES</h3>
+        </div>
+      </div>
+
+      <div class="box" onclick="openModal(8)">
+        <div class="icons">
+          <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+          <a title="Operational Safety and Compliance Solutions: Open It" onclick="openModal(8)" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="assets/opertional.webp" alt="Operational Safety and Compliance Solutions" />
+        </div>
+        <div class="content">
+          <h3>OPERATIONAL SAFETY & COMPLIANCE SOLUTIONS</h3>
+        </div>
+      </div>
+
+      <div class="box" onclick="openModal(9)">
+        <div class="icons">
+          <a title="Like" class="fas fa-heart" id="heart-icon" onclick="toggleHeartColor(this)"></a>
+          <a title="Industry Certifications: Open It" onclick="openModal(9)" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="assets/certificate.avif" alt="" />
+        </div>
+        <div class="content">
+          <h3>INDUSTRY CERTIFICATIONS</h3>
+        </div>
+      </div>
       
-            <div id="modal2" class="modal">
-              <div class="modal-content">
-                <span class="close-button" id="close" onclick="closeModal()">&times;</span>
-                <h2>Safety Technology</h2>
-                <div class="modal-body">
-                  <img src="safety_technology.jpg" alt="Safety Technology">
-                    <h3>"Leveraging Technology for Enhanced Safety"</h3><br>
-                      <p>We utilize cutting-edge technology to ensure safety is at the forefront of every journey.</p>
-                      <p>Our fleet is equipped with: 
-                        <ul class="modal-list">
-                           <li><i class="fas fa-angle-right"></i> GPS tracking and route optimization to minimize risk</li>
-                           <li><i class="fas fa-angle-right"></i> Onboard cameras and telematics to monitor driver behavior</li>
-                           <li><i class="fas fa-angle-right"></i> Electronic logging devices (ELDs) to comply with Hours of Service regulations</li>
-                           <li><i class="fas fa-angle-right"></i> Collision avoidance systems</li>
-                           <li><i class="fas fa-angle-right"></i> Real-time weather and traffic updates for safe navigation</li>
-                        </ul>
-                      </p>
-                      <p>By integrating these tools, we ensure our drivers have all the support they need to stay safe and efficient on the road.</p>
+      <!-- new -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+          <h2>DRIVER TRAINING & CERTIFICATION</h2>
+          <div class="modal-body">
+            <!-- <img src="safety_certification.png" alt="Safety Training and Certification Image"> -->
+              <!-- <h3>"Training Our Drivers for Success"</h3><br> -->
+                <p>At RAV SERVICES, we ensureyour drivers are well-qualified, trained, and compliant is crucial for 
+                  the success and safety of your operations. Our comprehensive driver screening and 
+                  training services provide a strong foundation for your fleet, improving safety, efficiency, and compliance.</p>
+                    <p><ul class="modal-list">
+                      <li><i class="fas fa-angle-right"></i> Driver Application Review</li>
+                      <li><i class="fas fa-angle-right"></i> Driver Safety Training</li>
+                      <li><i class="fas fa-angle-right"></i> Defensive Driving Courses</li>
+                      <li><i class="fas fa-angle-right"></i> Annual Driver Reviews</li>
+                      <li><i class="fas fa-angle-right"></i> Fleet Management Software Training</li>
+                      <li><i class="fas fa-angle-right"></i> Driver Wellness Programs</li>
+                      <li><i class="fas fa-angle-right"></i> Drug and Alcohol Awareness Training</li>
+                      <li><i class="fas fa-angle-right"></i> Emergency Response Training</li>
+                      <li><i class="fas fa-angle-right"></i> Specialized Training for Hazardous Materials (Hazmat)</li>
+                  </ul>
+                </p>
+                <p>At RAV SERVICES, we are dedicated to ensuring that your drivers are not only skilled and 
+                  experienced but also fully compliant with all relevant regulations. With our robust screening 
+                  process and comprehensive training programs, your fleet will be equipped to handle the demands 
+                  of the road while minimizing risks and enhancing operational efficiency. Whether you're looking 
+                  for regular compliance training, advanced safety courses, or specific certifications, we have 
+                  you covered.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="prev" onclick="prevModal(1)">Previous</button>
+            <button class="next" onclick="nextModal(1)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+          <h2>AUDITS</h2>
+          <div class="modal-body">
+            <!-- <img src="safety_technology.jpg" alt="Safety Technology"> -->
+              <!-- <h3>"Leveraging Technology for Enhanced Safety"</h3><br> -->
+                <p>At RAV SERVICES, we understand the importance of maintaining 
+                  compliance and staying ahead of regulatory requirements. Our audit 
+                  services are designed to help your business identify and address gaps 
+                  in compliance, ensuring that your operations run smoothly and meet all 
+                  legal standards. Here's how we support your company:</p> 
+                  <p><ul class="modal-list">
+                      <li><i class="fas fa-angle-right"></i> Fuel Tax Audits</li>
+                      <li><i class="fas fa-angle-right"></i> Pre-Audit Consultations</li>
+                      <li><i class="fas fa-angle-right"></i> Corrective Action Plans</li>
+                      <li><i class="fas fa-angle-right"></i> Investigations Assistance</li>
+                      <li><i class="fas fa-angle-right"></i> Mock Audits</li>
+                      <li><i class="fas fa-angle-right"></i> CSA Score Management</li>
+                      <li><i class="fas fa-angle-right"></i> U.S. Audits (New Entrant Audit)</li>
+                      <li><i class="fas fa-angle-right"></i> NSC Audits (NCCR / AUDIT)</li>
+                      <li><i class="fas fa-angle-right"></i> ELD Compliance Reviews</li>
+                      <li><i class="fas fa-angle-right"></i> Post-Audit Supportn</li>
+                  </ul>
+                </p>
+                <p>At RAV SERVICES, we combine industry expertise with a proactive 
+                  approach to audits. Whether you're preparing for a new entrant audit, 
+                  undergoing an NSC review, or facing a compliance investigation, our 
+                  team is here to guide you every step of the way. By focusing on 
+                  preparation, prevention, and remediation, we ensure your company operates 
+                  confidently and remains compliant with all regulatory standards.</p>
                 </div>
-                <div class="modal-footer">
-                  <button class="prev" onclick="prevModal(2)">Previous</button>
-                  <button class="next" onclick="nextModal(2)">Next</button>
-                </div>
-              </div>
+          <div class="modal-footer">
+            <button class="prev" onclick="prevModal(2)">Previous</button>
+            <button class="next" onclick="nextModal(2)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+          <h2>TRUCKING AUTHORITY SERVICES</h2>
+          <div class="modal-body">
+            <!-- <img src="driver_wellness.jpg" alt="Driver Wellness & Support"> -->
+              <!-- <h3>"Putting Driver Wellbeing First"</h3><br> -->
+            <p>Trucking authorities are crucial for trucking companies to operate legally 
+              and efficiently. At RAV SERVICES, these essential services include:</p> 
+              <p><ul class="modal-list">
+                  <li><i class="fas fa-angle-right"></i> IFTA Services</li>
+                  <li><i class="fas fa-angle-right"></i> Company Registration</li>
+                  <li><i class="fas fa-angle-right"></i> International Registration Plan (IRP)/ Apportioned Plates </li>
+                  <li><i class="fas fa-angle-right"></i> EIN Registration</li>
+                  <li><i class="fas fa-angle-right"></i> MC Number</li>
+                  <li><i class="fas fa-angle-right"></i> DOT Number</li>
+              </ul>
+            </p>
+            <p>Our team also works closely with drivers to ensure their schedules are manageable and comply with regulations to avoid fatigue and ensure alertness.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="prev" onclick="prevModal(3)">Previous</button>
+            <button class="next" onclick="nextModal(3)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+          <h2>POLICIES</h2>
+          <div class="modal-body">
+            <!-- <img src="truck_policies.png" alt="Compliance & Policies"> -->
+              <!-- <h3>"Ensuring Compliance for Everyone's Safety"</h3><br> -->
+            <p>At RAV SERVICES, we recognize the importance of robust policies 
+              in ensuring compliance, safety, and operational excellence. Our policy 
+              development services provide tailored solutions designed to meet 
+              regulatory standards and align with your company's goals.</p>
+              <p><ul class="modal-list">
+                  <li><i class="fas fa-angle-right"></i> Federal Motor Carrier Safety Administration (FMCSA) guidelines</li>
+                  <li><i class="fas fa-angle-right"></i> Department of Transportation (DOT) regulations</li>
+                  <li><i class="fas fa-angle-right"></i> State-specific laws and regulations</li>
+                  <li><i class="fas fa-angle-right"></i> Environmental safety standards</li>
+                  <li><i class="fas fa-angle-right"></i> Safety and Maintenance Manuals</li>
+                  <li><i class="fas fa-angle-right"></i> Driver Handbook Development</li>
+                  <li><i class="fas fa-angle-right"></i> Hours of Service (HOS) Compliance Policies</li>
+                  <li><i class="fas fa-angle-right"></i> Emergency Response Policies</li>
+                  <li><i class="fas fa-angle-right"></i> Drug and Alcohol Policies</li>
+                  <li><i class="fas fa-angle-right"></i> Employee Training and Development Policies</li>
+                  <li><i class="fas fa-angle-right"></i> Compliance Monitoring Policies</li>
+                </ul>
+              </p>
+              <p>At RAV SERVICES, our team of experts ensures that every policy we create is 
+                customized to your unique operational needs and aligns with industry standards. 
+                Whether you're starting from scratch or updating existing policies, we help you build 
+                a strong foundation for compliance, safety, and success.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="prev" onclick="prevModal(4)">Previous</button>
+            <button class="next" onclick="nextModal(4)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal5" class="modal">
+        <div class="modal-content">
+          <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+          <h2>ACCIDENT & RISK MANAGEMENT</h2>
+          <div class="modal-body">
+            <!-- <img src="incident_report.jpg" alt="Incident Reporting"> -->
+              <!-- <h3>"Report an Incident"</h3><br> -->
+            <p>At RAV SERVICES, we understand the importance of minimizing risks and managing incidents 
+              effectively to protect your business and its reputation. Our accident and risk management 
+              services are designed to provide comprehensive support before, during, and after incidents, 
+              helping you maintain a safe and compliant operation.</p>
+              <p><ul class="modal-list">
+                <li><i class="fas fa-angle-right"></i> Detailed Accident Reporting and Documentation</li>
+                <li><i class="fas fa-angle-right"></i> Incident Investigations and Root Cause Analysis</li>
+                <li><i class="fas fa-angle-right"></i> Insurance and Claims Management</li>
+                <li><i class="fas fa-angle-right"></i> Driver Retraining and Preventative Programs</li>
+                <li><i class="fas fa-angle-right"></i> Emergency Response Coordination</li>
+                <li><i class="fas fa-angle-right"></i> Safety Performance Monitoring</li>
+                <li><i class="fas fa-angle-right"></i> Proactive Risk Assessments</li>
+                <li><i class="fas fa-angle-right"></i> Compliance Risk Monitoring</li>
+                <li><i class="fas fa-angle-right"></i> Emergency Preparedness Planning</li>
+              </ul>
+            </p>
+            <p>At RAV SERVICES, we offer industry expertise in accident and risk management for trucking 
+              and transportation businesses. Tailored solutions that align with your company's unique needs 
+              and challenges. Commitment to safety, accountability, and operational excellence. With our 
+              services, you can trust that your business is equipped to manage risks effectively, ensuring 
+              safety for your drivers, vehicles, and the communities you serve.</p>
             </div>
-      
-            <div id="modal3" class="modal">
-              <div class="modal-content">
-                <span class="close-button" id="close" onclick="closeModal()">&times;</span>
-                <h2>Driver Wellness & Support</h2>
-                <div class="modal-body">
-                  <img src="driver_wellness.jpg" alt="Driver Wellness & Support">
-                    <h3>"Putting Driver Wellbeing First"</h3><br>
-                  <p>We believe that a healthy driver is a safe driver. That's why we invest in the wellness of our team.</p>
-                  <p>Our wellness program covers:
-                    <ul class="modal-list">
-                       <li><i class="fas fa-angle-right"></i> Health and wellness sessions</li>
-                       <li><i class="fas fa-angle-right"></i> Fatigue management resources</li>
-                       <li><i class="fas fa-angle-right"></i> Access to mental health support</li>
-                       <li><i class="fas fa-angle-right"></i> Collision avoidance systems</li>
-                       <li><i class="fas fa-angle-right"></i> Guidelines on healthy driving habits and lifestyle choices</li>
-                    </ul>
-                  </p>
+          <div class="modal-footer">
+            <button class="prev" onclick="prevModal(5)">Previous</button>
+            <button class="next" onclick="nextModal(5)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal6" class="modal">
+        <div class="modal-content">
+          <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+          <h2>PERMITS</h2>
+          <div class="modal-body">
+            <!-- <img src="incident_report.jpg" alt="Incident Reporting"> -->
+              <!-- <h3>"Report an Incident"</h3><br> -->
+            <p>At RAV SERVICES, we ensure that your fleet is compliant with Canadian 
+              and US permits. Here's how we can help your business stay on track:
+              <ul class="modal-list">
+                <li><i class="fas fa-angle-right"></i> Canadian Provincial Permits and Filings</li>
+                <li><i class="fas fa-angle-right"></i> Motor Vehicle Registration and Licensing</li>
+                <li><i class="fas fa-angle-right"></i> Temporary Permits (Trip/Fuel)</li>
+                <li><i class="fas fa-angle-right"></i> Oversize/Overweight Permits</li>
+                <li><i class="fas fa-angle-right"></i> Provincial and Municipal Permits</li>
+                <li><i class="fas fa-angle-right"></i> Canadian Border Crossing and Customs Compliance</li>
+                <li><i class="fas fa-angle-right"></i> U.S. Border Crossing Documentation</li>
+                <li><i class="fas fa-angle-right"></i> U.S. Weigh Station Permits and Weigh Station Bypass Services (PrePass)</li>
+                <li><i class="fas fa-angle-right"></i> U.S. Border Protection and Immigration Compliance (Customs-Trade Partnership Against Terrorism – C-TPAT)</li>
+              </ul>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="prev" onclick="prevModal(6)">Previous</button>
+            <button class="next" onclick="nextModal(6)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal7" class="modal">
+        <div class="modal-content">
+          <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+          <h2>BOND SERVICES</h2>
+          <div class="modal-body">
+            <!-- <img src="incident_report.jpg" alt="Incident Reporting"> -->
+              <!-- <h3>"Report an Incident"</h3><br> -->
+            <p>At RAV SERVICES, we understand that bonds are essential for businesses 
+              involved in transportation and logistics. Our expert team helps you navigate 
+              the complexities of bond requirements, ensuring smooth cross-border and 
+              freight operations.</p>
+              <p><ul class="modal-list">
+                <li><i class="fas fa-angle-right"></i> US Customs Bond</li>
+                <li><i class="fas fa-angle-right"></i> Surety Bonds for Trucking</li>
+                <li><i class="fas fa-angle-right"></i> Canadian Customs (CAD) Bond</li>
+                <li><i class="fas fa-angle-right"></i> Carrier Bonds for Cross-Border Transport</li>
+                <li><i class="fas fa-angle-right"></i> Freight Broker Bond</li>
+              </ul></p>
+            <p>Our team simplifies the application process and ensures full compliance with regulatory 
+              requirements. We offer tailored bond services based on your business needs and operational 
+              scope. We handle all documentation and filing, so you can focus on your business.
+              From customs to freight and logistics bonds, we offer a comprehensive range of bond solutions.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="prev" onclick="prevModal(7)">Previous</button>
+            <button class="next" onclick="nextModal(7)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal8" class="modal">
+        <div class="modal-content">
+          <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+          <h2>OPERATIONAL SAFETY & COMPLIANCE SOLUTIONS</h2>
+          <div class="modal-body">
+            <!-- <img src="incident_report.jpg" alt="Incident Reporting"> -->
+              <!-- <h3>"Report an Incident"</h3><br> -->
+            <p>At RAV SERVICES, we provide a comprehensive suite of services designed to help 
+              trucking companies maintain operational safety and meet compliance standards. 
+              Our expertise ensures your fleet operates efficiently while adhering to regulatory 
+              requirements.</p>
+              <p><ul class="modal-list">
+                <li><i class="fas fa-angle-right"></i> Driver Violation Alerts</li>
+                <li><i class="fas fa-angle-right"></i> Electronic Logging Device (ELD) Management</li>
+                <li><i class="fas fa-angle-right"></i> Record Keeping (Vehicle, Drivers, Authorities, Renewals)</li>
+                <li><i class="fas fa-angle-right"></i> Accident Reporting Support</li>
+                <li><i class="fas fa-angle-right"></i> Logbook Monitoring</li>
+                <li><i class="fas fa-angle-right"></i> Inspection Preparation</li>
+                <li><i class="fas fa-angle-right"></i> DOT/FMCSA Compliance Audits</li>
+                <li><i class="fas fa-angle-right"></i> Vehicle Maintenance Schedules</li>
+                <li><i class="fas fa-angle-right"></i> Fleet Tracking Integration</li>
+                <li><i class="fas fa-angle-right"></i> E-Log Setup and Support</li>
+              </ul></p>
+            <p>Our team has extensive knowledge of Canadian and US compliance standards. We identify potential 
+              issues before they become problems, helping you avoid costly penalties. Services are customized 
+              to meet your business's unique operational needs. We stay updated on regulatory changes to keep your business ahead of compliance requirements
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button class="prev" onclick="prevModal(8)">Previous</button>
+            <button class="next" onclick="nextModal(8)">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modal9" class="modal">
+        <div class="modal-content">
+          <span class="close-button" id="close" onclick="closeModal()">&times;</span>
+          <h2>INDUSTRY CERTIFICATES</h2>
+          <div class="modal-body">
+            <!-- <img src="incident_report.jpg" alt="Incident Reporting"> -->
+              <!-- <h3>"Report an Incident"</h3><br> -->
+            <p>Certifications are vital for establishing your company's credibility, 
+              ensuring regulatory compliance, and streamlining operations. At RAV SERVICES, 
+              we guide you through the certification process, helping you achieve the standards 
+              required to operate efficiently and build trust with your clients.</p>
+              <p><ul class="modal-list">
+                <li><i class="fas fa-angle-right"></i> CSA Certification (Customs Self-Assessment)</li>
+                <li><i class="fas fa-angle-right"></i> SmartWay Certification</li>
+                <li><i class="fas fa-angle-right"></i> C-TPAT Certification (Customs-Trade Partnership Against Terrorism)</li>
+                <li><i class="fas fa-angle-right"></i> WHMIS Compliance Certification</li>
+                <li><i class="fas fa-angle-right"></i> AEO Certification (Authorized Economic Operator)</li>
+                <li><i class="fas fa-angle-right"></i> PIP Certification (Partners in Protection)</li>
+                <li><i class="fas fa-angle-right"></i> FAST Certification (Free and Secure Trade Program)</li>
+                <li><i class="fas fa-angle-right"></i> ISO Certification (International Organization for Standardization)</li>
+                <li><i class="fas fa-angle-right"></i> HACCP Certification (Hazard Analysis and Critical Control Points)</li>
+              </ul></p>
+            <p>At RAV SERVICES, We manage the application process from start to finish, ensuring accuracy and efficiency. With 
+              in-depth knowledge of Canadian, US, and international standards, we ensure your compliance. Our services are 
+              customized to meet the specific needs of your industry and operations. We keep you informed of any regulatory
+              changes affecting your certifications.
                  
-                  <p>Our team also works closely with drivers to ensure their schedules are manageable and comply with regulations to avoid fatigue and ensure alertness.</p>
-                </div>
-                <div class="modal-footer">
-                  <button class="prev" onclick="prevModal(3)">Previous</button>
-                  <button class="next" onclick="nextModal(3)">Next</button>
-                </div>
-              </div>
-            </div>
-
-            <div id="modal4" class="modal">
-              <div class="modal-content">
-                <span class="close-button" id="close" onclick="closeModal()">&times;</span>
-                <h2>Compliance & Policies</h2>
-                <div class="modal-body">
-                  <img src="truck_policies.png" alt="Compliance & Policies">
-                    <h3>"Ensuring Compliance for Everyone's Safety"</h3><br>
-                  <p>At RAV Services, we follow all industry regulations and work tirelessly to stay up-to-date with changing laws. </p>
-                    <p>We are proud to be compliant with:
-                      <ul class="modal-list">
-                        <li><i class="fas fa-angle-right"></i> Federal Motor Carrier Safety Administration (FMCSA) guidelines</li>
-                        <li><i class="fas fa-angle-right"></i> Department of Transportation (DOT) regulations</li>
-                        <li><i class="fas fa-angle-right"></i> State-specific laws and regulations</li>
-                        <li><i class="fas fa-angle-right"></i> Environmental safety standards</li>
-                     </ul>
-                    </p>
-                    <p>Our safety policies are designed to exceed industry standards and are continually updated to reflect the latest safety practices and technology advancements.</p>
-                </div>
-                <div class="modal-footer">
-                  <button class="prev" onclick="prevModal(4)">Previous</button>
-                  <button class="next" onclick="nextModal(4)">Next</button>
-                </div>
-              </div>
-            </div>
-
-            <div id="modal5" class="modal">
-              <div class="modal-content">
-                <span class="close-button" id="close" onclick="closeModal()">&times;</span>
-                <h2>Incident Reporting</h2>
-                <div class="modal-body">
-                  <img src="incident_report.jpg" alt="Incident Reporting">
-                    <h3>"Report an Incident"</h3><br>
-                  <p>If you have witnessed or been involved in an incident, please report 
-                    it to our Safety Department immediately. We take every report seriously and use this information to continually improve our safety processes.</p>
-                </div>
-                <div class="modal-footer">
-                  <button class="prev" onclick="prevModal(5)">Previous</button>
-                  <button class="next" onclick="nextModal(5)">Next</button>
-                </div>
-              </div>
-            </div>
-
-
-          </div>  
-        </section>
-
-        <!-- review section starts  -->
-
-      <!-- <section class="review" id="review">
-        <h1 class="heading">customer's <span>review</span></h1>
-
-        <div class="box-container">
-          <div class="box">
-            <img src="images/quote-img.png" alt="customer review image" class="quote" />
-            <p>
-              Excellent product! Arrived faster than expected. Exceeded my quality expectations. Highly recommended, though
-              minor delivery process improvements could be made for a smoother experience.
             </p>
-            <div class="customer-profile">
-              <img src="images/pic-1.jpg" class="user" alt="" />
-              <h3>Alice Kennedy</h3>
-              <div title="5 Stars" class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
           </div>
-
-          <div class="box">
-            <img src="images/quote-img.png" alt="customer review image" class="quote" />
-            <p>
-              The product is decent, but there were several issues with the packaging. It took longer than expected to
-              arrive, which significantly affected my overall satisfaction with the purchase. But the quality is best.
-            </p>
-            <div class="customer-profile">
-              <img src="images/pic-2.jpg" class="user" alt="" />
-              <h3>Sophia Miller</h3>
-              <div title="3 Stars" class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="box">
-            <img src="images/quote-img.png" alt="customer review image" class="quote" />
-            <p>
-              Overall, a good product. It met my expectations in terms of quality and functionality. However, there were
-              some minor issues with the delivery process that could be improved. But recommended you to try it.
-            </p>
-            <div class="customer-profile">
-              <img src="images/pic-3.jpg" class="user" alt="" />
-              <h3>Michael Peterson</h3>
-              <div title="4 Stars" class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-            </div>
+          <div class="modal-footer">
+            <button class="prev" onclick="prevModal(9)">Previous</button>
+            <button class="next" onclick="nextModal(9)">Next</button>
           </div>
         </div>
-      </section> -->
+      </div>
 
-      <!-- review section ends -->
+
+    </div>  
+  </section>
 
         <!-- Contact section starts -->
         
@@ -504,32 +650,35 @@
           <h1 class="heading">Contact Us</h1>
 
           <div class="row">
-            <!-- <iframe class="map" 
-              src="https://www.google.com/maps/embed/place/8+Romney+Ct,+Brampton,+ON+L6Z+3S2/@43.7185382,-79.7812826,17z/data=!3m1!4b1!4m6!3m5!1s0x882b167e9af01d0f:0x12c52cdb2fb0b761!8m2!3d43.7185382!4d-79.7812826!16s%2Fg%2F11cpjbftwq?entry=ttu&g_ep=EgoyMDI0MTAyMS4xIKXMDSoASAFQAw%3D%3D"
-              allowfullscreen="" loading="lazy"></iframe> -->
-            <img src="crossborder.png">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.6153562911163!2d-79.78385752433923!3d43.71854204820302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b167e9af01d0f%3A0x12c52cdb2fb0b761!2s8%20Romney%20Ct%2C%20Brampton%2C%20ON%20L6Z%203S2!5e0!3m2!1sen!2sca!4v1731965974880!5m2!1sen!2sca"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
 
               <form id="contactForm" method="POST" onsubmit="sendMail(event)">
                 <p>If you have any questions, concerns, or would like more information about our safety protocols, feel free to reach out to our team.</p>
                 <div class="inputBox">
                   <span class="fas fa-user"></span>
-                  <input type="text" name="Name" placeholder="Enter Your Name" required />
+                  <input type="text" name="Name" placeholder="Full Name" required />
                 </div>
                 <div class="inputBox">
                   <span class="fas fa-envelope"></span>
-                  <input type="email" name="Email" placeholder="Enter Your Email Address" required />
+                  <input type="email" name="Email" placeholder="Email Address" required />
                 </div>
                 <div class="inputBox">
                   <span class="fas fa-phone"></span>
-                  <input type="tel" name="Number" id="numberInput" placeholder="Enter Your Number (Atleast 10 Digits)" required 
+                  <input type="tel" name="Number" id="numberInput" placeholder="Number" required 
                     oninput="this.value = this.value.replace(/\D/g,'')"/>
                   <span id="numberError" class="error-message"></span>
                 </div>
                 <div class="inputBox">
                   <span class="fas fa-message"></span>
-                  <input type="text" name="Message" placeholder="Enter The Message/Your Concern" required />
+                  <input type="text" name="Message" placeholder="Message" required />
                 </div>
-                <!-- <input type="submit" value="Submit----" name="submit" class="btn"> -->
                 
                 <button type="submit" class="btn">Submit</button>
                 <div id="submitMessage" class="submit-message"></div> 
@@ -539,18 +688,15 @@
         </section>
 
           <!-- contact section ends -->
-    
-  <!-- footer section starts  -->
 
   <section class="footer">
-      <img src="15.png" alt="">
+      <img src="footer2.webp" alt="">
       <h3>RAV Services Contact details:</h3>
               
       <div class="share">
-        <a href="xyz" target="_blank" class="fab fa-facebook-f"></a>
-        <a href="muskansachdvea05@gmail.com" target="_blank" class="fa fa-envelope"></a>
-        <a href="hhs" target="_blank" class="fab fa-instagram"></a>
-        <a href="dghs" target="_blank" class="fab fa-linkedin"></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ravserviceinc@gmail.com&su=Inquiry&body=Hello, I would like to know more about your services." target="_blank" class="fa fa-envelope"></a>
+        <!-- <a href="hhs" target="_blank" class="fab fa-instagram"></a> -->
+        <a href="https://www.linkedin.com/in/muskan-sachdeva-b8010b211/" target="_blank" class="fab fa-linkedin"></a>
       </div>
 
       <div class="contactdetails">
@@ -567,5 +713,8 @@
   </section>
 
   <!-- footer section ends -->
+
+  <!-- custom js file link  -->
+  <script src="ravScript.js"></script>
 </body>
 </html>
