@@ -2,30 +2,10 @@ let navbar = document.querySelector('.navbar');
 
 document.querySelector('#menu-btn').onclick = () => {
     navbar.classList.toggle('active');
-    searchForm.classList.remove('active');
-    // cartItem.classList.remove('active');
 }
-
-let searchForm = document.querySelector('.search-form');
-
-document.querySelector('#search-btn').onclick = () => {
-    searchForm.classList.toggle('active');
-    navbar.classList.remove('active');
-    // cartItem.classList.remove('active');
-}
-
-// let cartItem = document.querySelector('.cart-items-container');
-
-// document.querySelector('#cart-btn').onclick = () => {
-//   cartItem.classList.toggle('active');
-//   navbar.classList.remove('active');
-//   searchForm.classList.remove('active');
-// }
 
 window.onscroll = () => {
     navbar.classList.remove('active');
-    searchForm.classList.remove('active');
-    // cartItem.classList.remove('active');
   }
 
 function scrollToTop() {
@@ -44,22 +24,6 @@ function scrollToTop() {
     }
 });
 
-
-const darkModeToggle = document.getElementById('darkModeToggle');
-const darkModeLabel = document.getElementById('darkModeLabel');
-
-darkModeLabel.addEventListener('change', function() {
-    if(darkModeToggle.checked) {
-        document.body.classList.add('dark-mode');
-        darkModeLabel.title = "Light mode: on";
-        localStorage.setItem('darkMode', 'off')
-    } 
-    else {
-        document.body.classList.remove('dark-mode');
-        darkModeLabel.title = "Dark mode: on";
-        localStorage.setItem('darkMode', 'on')
-    }
-});
  
 const modal = document.getElementById('myModal');
 const openModalButton = document.getElementById('openModalButton');
@@ -81,149 +45,6 @@ window.addEventListener('click', (event) => {
         modal.style.display = 'none';
     }   
 });
-
-// checkout
-// Function to add items to the cart
-/* function addToCart(itemName, itemPrice) {
-    let cartContainer = document.getElementById('cart-items');
-    let existingItem = cartContainer.querySelector(`[data-name="${itemName}"]`);
-  
-    // Add the cart header if it's not already there
-    let cartHeader = document.getElementById('cart-header');
-    if (!cartHeader) {
-      cartHeader = document.createElement('div');
-      cartHeader.id = 'cart-header';
-      cartHeader.classList.add('cart-header');
-      cartHeader.innerHTML = `
-            <div class="header-name">Item Name</div>
-            <div class="header-quantity">Quantity</div>
-            <div class="header-price">Price</div>
-        `;
-      cartContainer.appendChild(cartHeader);
-    }
-  
-    if (existingItem) {
-      let quantityElement = existingItem.querySelector('.item-quantity span');
-      let currentQuantity = parseInt(quantityElement.textContent);
-      quantityElement.textContent = currentQuantity + 1;
-  
-      let totalPriceElement = existingItem.querySelector('.item-total-price span');
-      let currentTotalPrice = parseFloat(totalPriceElement.textContent);
-      let newTotalPrice = currentTotalPrice + itemPrice;
-      totalPriceElement.textContent = newTotalPrice.toFixed(2);
-    } else {
-      let newItem = document.createElement('div');
-      newItem.classList.add('cart-item');
-      newItem.setAttribute('data-name', itemName);
-  
-      newItem.innerHTML = `
-            <div class="item-name">${itemName}</div>
-            <div class="item-quantity"><span>1</span></div>
-            <div class="item-total-price">$<span>${itemPrice.toFixed(2)}</span></div>
-            <button class="btn-remove" onclick="removeFromCart(this)">&times;</button>
-        `;
-  
-      cartContainer.appendChild(newItem);
-    }
-  
-    updateCartTotal();
-    showNotificationMainScreen(`${itemName} added to cart ☕.`);
-  }
-  
-  // Function to update the total items and prices in the cart
-  function updateCartTotal() {
-    let cartItems = document.querySelectorAll('.cart-item');
-    let totalItems = 0;
-    let totalPrice = 0;
-  
-    cartItems.forEach(function (item) {
-      let quantity = parseInt(item.querySelector('.item-quantity span').textContent);
-      let price = parseFloat(item.querySelector('.item-total-price span').textContent);
-      totalItems += quantity;
-      totalPrice += price;
-    });
-  
-    let taxes = totalPrice * 0.10;
-    let finalTotal = totalPrice + taxes;
-  
-    let formattedTotalPrice = totalPrice.toFixed(2);
-    let formattedTaxes = taxes.toFixed(2);
-    let formattedFinalTotal = finalTotal.toFixed(2);
-  
-    document.getElementById('total-items').textContent = totalItems;
-    document.getElementById('total-price').textContent = '$' + formattedTotalPrice;
-    document.getElementById('taxes').textContent = '$' + formattedTaxes;
-    document.getElementById('final-total-price').textContent = '$' + formattedFinalTotal;
-  
-    let emptyCartMessage = document.getElementById('empty-cart-message');
-    let cartHeader = document.getElementById('cart-header');
-    if (totalItems > 0) {
-      emptyCartMessage.style.display = 'none';
-      if (cartHeader) cartHeader.style.display = 'flex';
-    } else {
-      emptyCartMessage.style.display = 'block';
-      if (cartHeader) cartHeader.style.display = 'none';
-    }
-    document.getElementById('cart-badge').textContent = totalItems;
-  }
-  
-  window.onload = function () {
-    updateCartTotal();
-  };
-  
-  // Function to remove an item from the cart
-  function removeFromCart(button) {
-    let item = button.parentNode;
-    item.parentNode.removeChild(item);
-    updateCartTotal();
-  }
-  
-  // Function to handle checkout
-  function checkout() {
-    let cartItems = document.querySelectorAll('.cart-item');
-    let cartContainer = document.getElementById('cart-items-container');
-  
-    if (cartItems.length > 0) {
-      clearCart();
-      showNotificationMainScreen('Purchase done! Your order have been placed.🎉');
-    } else {
-      showNotificationMainScreen('No items in cart. Please add items.🙁');
-    }
-  
-    setTimeout(function () {
-      hideNotificationMainScreen();
-      resetUI();
-    }, 3000);
-  }
-  
-  // Function to clear the cart
-  function clearCart() {
-    let cartItemsContainer = document.getElementById('cart-items');
-    cartItemsContainer.innerHTML = '';
-    updateCartTotal();
-  }
-  
-  // Function to reset UI elements
-  function resetUI() {
-    let emptyCartMessage = document.getElementById('empty-cart-message');
-    emptyCartMessage.style.display = 'block';
-  }
-  
-  // Function to show a notification on the main screen
-  function showNotificationMainScreen(message) {
-    let notification = document.getElementById('notification-main-screen');
-    notification.textContent = message;
-    notification.style.display = 'block';
-    setTimeout(function () {
-      hideNotificationMainScreen();
-    }, 3000);
-  }
-  
-  // Function to hide the notification on the main screen
-  function hideNotificationMainScreen() {
-    let notification = document.getElementById('notification-main-screen');
-    notification.style.display = 'none';
-  } */ 
 
 function toggleHeartColor(icon) {
     icon.classList.toggle('red-heart');
@@ -272,75 +93,20 @@ function showErrorMessage() {
   errorDiv.style.display = 'block';
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Function to play a pop sound effect
-//   function playPopSound() {
-//     const audio = document.getElementById('popSound');
-//     audio.currentTime = 0;
-//     audio.play();
-//   }
-
-//  // Attach click event listeners to each 'add to cart' button
-//  for (let i = 1; i <= 6; i++) {
-//   const button = document.getElementById(`clickButton${i}`);
-//   button.addEventListener('click', () => {
-//     playPopSound();
-//   });
-// }
-// });
-
-// function openPopup(windowNumber) {
-//   closePopup();
-//   const popup = document.getElementById('popup' + windowNumber);
-//   popup.style.display = 'block';
-//   popup.style.animation = 'fadeIn 0.5s forwards, slideIn 0.5s forwards';
-//   document.getElementById('overlay').style.display = 'block';
-// }
-
-// function closePopup() {
-//   var popups = document.querySelectorAll('.popup');
-//   popups.forEach(function (popup) {
-//     popup.style.display = 'none';
-//     popup.style.animation = '';
-//   });
-//   document.getElementById('overlay').style.display = 'none';
-// }
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  const searchInput = document.getElementById('search-box');
-  const paragraphs = document.querySelectorAll('h3');
-
-  searchInput.addEventListener('input', function () {
-    const searchTerm = searchInput.value.trim().toLowerCase();
-
-    paragraphs.forEach(function (paragraph) {
-      const text = paragraph.textContent.trim();
-      const lowerCaseText = text.toLowerCase();
-
-      // Reset paragraph content to remove previous highlights
-      paragraph.innerHTML = text;
-
-      // Highlight matching text
-      if (lowerCaseText.includes(searchTerm)) {
-        const index = lowerCaseText.indexOf(searchTerm);
-        const matchedText = text.substr(index, searchTerm.length);
-        const highlighted = `<span class="highlight">${matchedText}</span>`;
-        const newText = text.replace(matchedText, highlighted);
-        paragraph.innerHTML = newText;
-      }
-    });
-  });
-});
-
-
-
 // Services modal
 var modal1 = document.getElementById("modal1");
 var modal2 = document.getElementById("modal2");
 var modal3 = document.getElementById("modal3");
 var modal4 = document.getElementById("modal4");
 var modal5 = document.getElementById("modal5");
+var modal6 = document.getElementById("modal6");
+var modal7 = document.getElementById("modal7");
+var modal8 = document.getElementById("modal8");
+var modal9 = document.getElementById("modal9");
+var modal10 = document.getElementById("modal10");
+var modal11 = document.getElementById("modal11");
+var modal12 = document.getElementById("modal12");
+var modal13 = document.getElementById("modal13");
 
 // Function to open a specific modal
 function openModal(modalId) {
@@ -354,56 +120,63 @@ function openModal(modalId) {
         modal4.style.display = 'block';
     } else if (modalId === 5) {
        modal5.style.display = 'block';
+    } else if (modalId === 6) {
+      modal6.style.display = 'block';
+    } else if (modalId === 7) {
+      modal7.style.display = 'block';
+    } else if (modalId === 8) {
+      modal8.style.display = 'block';
+    } else if (modalId === 9) {
+      modal9.style.display = 'block';
+    } else if (modalId === 10) {
+      modal10.style.display = 'block';
+    } else if (modalId === 11) {
+      modal11.style.display = 'block';
+    } else if (modalId === 12) {
+      modal12.style.display = 'block';
+    } else if (modalId === 13) {
+      modal13.style.display = 'block';
     }
+}
+// Function to open a specific modal
+function openModal(modalId) {
+  // Hide all modals
+  closeModal();
+  // Show the selected modal
+  var modal = document.getElementById("modal" + modalId);
+  if (modal) {
+      modal.style.display = 'block';
+  }
 }
 
 // Function to close all modals
 function closeModal() {
-    modal1.style.display = "none";
-    modal2.style.display = "none";
-    modal3.style.display = "none";
-    modal4.style.display = "none";
-    modal5.style.display = "none";
+  var modals = [modal1, modal2, modal3, modal4, modal5, modal6, modal7, modal8, modal9, modal10, modal11, modal12, modal13];
+  for (var i = 0; i < modals.length; i++) {
+      modals[i].style.display = "none";
   }
+}
 
 // Event Listener for close buttons
-var closeButtons = document.getElementById("close");
-for ( var i = 0; i < closeButtons.length; i++) {
-    closeButtons[i].addEventListener("click", closeModal);
+var closeButtons = document.getElementsByClassName("close");
+for (var i = 0; i < closeButtons.length; i++) {
+  closeButtons[i].addEventListener("click", closeModal);
 }
 
 // Function to navigate to the previous modal
 function prevModal(currentModal) {
-    closeModal();
-    var preModal = currentModal -1;
-    if (preModal < 1) {
-        preModal = 5 ; // Wrap around to th elast modal
-    }
-    openModal(prevModal);
+  var preModal = currentModal - 1;
+  if (preModal < 1) {
+      preModal = 9; // Wrap around to the last modal
+  }
+  openModal(preModal);
 }
 
 // Function to navigate to next modal
-function nextModal (currentModal) {
-    closeModal();
-    var nextModal = currentModal + 1;
-    if (nextModal > 5) {
-        nextModal = 1; // Wrap around to the first modal
-    }
-    openModal(nextModal);
+function nextModal(currentModal) {
+  var nextModal = currentModal + 1;
+  if (nextModal > 9) {
+      nextModal = 1; // Wrap around to the first modal
+  }
+  openModal(nextModal);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
