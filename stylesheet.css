@@ -1080,7 +1080,7 @@ section {
     font-size: 50%;
   }
   .logo, .header-right {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .about .row .image img {
     width: 100%;
@@ -1104,7 +1104,7 @@ section {
 
 @media (max-width: 393px) {
   .logo, .header-right {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .header {
     padding: 0px 7px;
