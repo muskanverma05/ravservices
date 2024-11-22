@@ -1073,6 +1073,9 @@ section {
   .modal-body {
     padding: 5px;
   }
+  .services {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1100,11 +1103,14 @@ section {
   .modal-body {
     padding: 5px;
   }
+  .services {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 393px) {
   .logo, .header-right {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .header {
     padding: 0px 7px;
@@ -1134,9 +1140,15 @@ section {
   .trust-section .trust-banner {
     padding: 8rem 1rem;
   }
+  .services {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 376px) {
+  .logo, .header-right {
+    font-size: 3rem;
+  }
   section {
     padding: 2rem;
   }
@@ -1163,9 +1175,15 @@ section {
   .btn {
     font-size: 1.5rem;
   }
+  .services {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 357px) {
+  .logo, .header-right {
+    font-size: 3rem;
+  }
   .fa-search:before {
     display: none;
   }
